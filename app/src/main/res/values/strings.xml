@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">World Radio</string>
+    <string name="title_splash">World Radio</string>
+    <string name="text_splash">In the rhythm\nof the beloved\ncity</string>
+    <string name="station">Станции</string>
+    <string name="favorite">Избранное</string>
+    <string name="more">Еще</string>
+    <string name="settings">Настройки</string>
+    <string name="share">Поделиться</string>
+    <string name="feedback">Обратная связь</string>
+</resources>
