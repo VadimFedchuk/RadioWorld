@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.bottom_sheet_layout.*
 import kotlinx.android.synthetic.main.main_content_layout.*
 import kotlinx.android.synthetic.main.main_fragment.*
 import java.security.AccessController.getContext
+import kotlinx.android.synthetic.main.main_fragment.bottom_sheet as bottom_sheet1
 
 
 class SplashActivity : AppCompatActivity() {
