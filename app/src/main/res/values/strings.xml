@@ -8,4 +8,9 @@
     <string name="settings">Настройки</string>
     <string name="share">Поделиться</string>
     <string name="feedback">Обратная связь</string>
+    <string name="title_feedback">Обратная связь</string>
+    <string name="hint_input_email">Введите email</string>
+    <string name="text_feedback_title">Ввведите сообщение</string>
+    <string name="title_send">Отправить</string>
+    <string name="music">Музыка</string>
 </resources>

@@ -5,11 +5,11 @@
         android:icon="@drawable/ic_broadcast"
         android:title="@string/station"/>
     <item
-        android:id="@+id/action_favorite"
-        android:icon="@drawable/ic_settings"
-        android:title="@string/settings" />
+        android:id="@+id/action_music"
+        android:icon="@drawable/ic_music_player"
+        android:title="@string/music" />
     <item
-        android:id="@+id/action_more"
-        android:icon="@drawable/ic_more_options"
-        android:title="@string/more" />
+        android:id="@+id/action_feedback"
+        android:icon="@drawable/ic_feedback"
+        android:title="@string/feedback" />
 </menu>

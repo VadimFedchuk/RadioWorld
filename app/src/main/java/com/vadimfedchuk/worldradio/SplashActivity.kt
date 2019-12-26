@@ -2,17 +2,10 @@ package com.vadimfedchuk.worldradio
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import androidx.cardview.widget.CardView
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-import com.google.android.material.bottomsheet.BottomSheetBehavior
-import kotlinx.android.synthetic.main.bottom_sheet_layout.*
 import kotlinx.android.synthetic.main.main_content_layout.*
 import kotlinx.android.synthetic.main.main_fragment.*
-import java.security.AccessController.getContext
-import kotlinx.android.synthetic.main.main_fragment.bottom_sheet as bottom_sheet1
+import me.zhanghai.android.materialplaypausedrawable.MaterialPlayPauseDrawable
+import android.view.View
 
 
 class SplashActivity : AppCompatActivity() {
@@ -30,7 +23,7 @@ class SplashActivity : AppCompatActivity() {
                 R.id.action_station -> {
 
                 }
-                R.id.action_more -> {
+                R.id.action_feedback -> {
                     expandLayout()
                 }
             }
@@ -42,14 +35,25 @@ class SplashActivity : AppCompatActivity() {
             setCardBackgroundColor(resources.getColor(android.R.color.transparent))
             background.alpha = 0
         }
+
+        play_pause_button.setOnClickListener {
+
+                val newState =
+                    if (play_pause_button.state === MaterialPlayPauseDrawable.State.Play)
+                        MaterialPlayPauseDrawable.State.Pause
+                    else
+                        MaterialPlayPauseDrawable.State.Play
+                play_pause_button.state = newState
+            }
+
     }
 
     private fun expandLayout() {
-        val bottomSheetBehavior = BottomSheetBehavior.from(bottom_sheet)
-        if (bottomSheetBehavior.state != BottomSheetBehavior.STATE_EXPANDED) {
-            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED)
-        } else {
-            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED)
-        }
+//        val bottomSheetBehavior = BottomSheetBehavior.from(bottom_sheet)
+//        if (bottomSheetBehavior.state != BottomSheetBehavior.STATE_EXPANDED) {
+//            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED)
+//        } else {
+//            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED)
+//        }
     }
 }

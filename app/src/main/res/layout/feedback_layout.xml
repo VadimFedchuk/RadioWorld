@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        app:cardElevation="0dp"
+        card_view:cardPreventCornerOverlap="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_top_bar">
+
+            <FrameLayout
+                android:id="@+id/nb_add_portfolio"
+                android:layout_width="58dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/text_splash_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_feedback"
+                android:textColor="@color/text_color_splash"
+                android:textSize="32sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/input_email_et"
+        style="@style/editText_feedback_style"
+        android:layout_below="@id/top_bar"
+        android:gravity="center|start"
+        android:hint="@string/hint_input_email"
+        android:inputType="textEmailAddress"
+        android:minHeight="50dp" />
+
+    <EditText
+        android:id="@+id/input_text_et"
+        style="@style/editText_feedback_style"
+        android:layout_below="@id/input_email_et"
+        android:gravity="top|start"
+        android:hint="@string/text_feedback_title"
+        android:minHeight="150dp" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:text="@string/title_send"
+        android:textColor="#545350"
+        android:textSize="18sp"
+        android:layout_below="@id/input_text_et"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
